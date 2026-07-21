@@ -1,0 +1,223 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    padding:40px 20px;
+
+    background:linear-gradient(135deg,#87CEEB,#BFEFFF,#EAFBFF);
+
+}
+
+/* Floating Background */
+
+body::before{
+
+    content:"💙 💖 💙 💖 💙";
+
+    position:absolute;
+
+    top:-20%;
+
+    left:-20%;
+
+    width:140%;
+
+    height:140%;
+
+    font-size:40px;
+
+    opacity:.15;
+
+    animation:float 20s linear infinite;
+
+    white-space:pre-wrap;
+
+}
+
+@keyframes float{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(200px);
+    }
+
+}
+
+.container{
+
+    width:90%;
+
+    max-width:750px;
+
+    z-index:2;
+
+}
+
+.letter{
+
+    background:rgba(255,255,255,.35);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+    animation:fadeIn 1.2s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+h1{
+
+    color:#0D47A1;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    font-size:2.2rem;
+
+}
+
+.typing{
+
+    min-height:auto;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+    color:#1E3A5F;
+
+    white-space:pre-wrap;
+
+}
+
+#nextBtn{
+
+    margin-top:35px;
+
+    display:block;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#2196F3;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#nextBtn:hover{
+
+    transform:scale(1.05);
+
+    background:#1976D2;
+
+}
+
+#nextBtn.hidden{
+    display:none;
+}
+
+@media(max-width:600px){
+
+    .letter{
+
+        padding:25px;
+
+    }
+
+    h1{
+
+        font-size:1.8rem;
+
+    }
+
+    .typing{
+
+        font-size:16px;
+
+    }
+
+}
+@media (max-width:768px){
+
+    .container{
+        width:95%;
+        padding:20px;
+    }
+
+    h1{
+        font-size:2rem;
+    }
+
+    h2{
+        font-size:1.2rem;
+    }
+
+    p{
+        font-size:16px;
+    }
+
+    button{
+        width:100%;
+        font-size:16px;
+        padding:15px;
+    }
+
+}
